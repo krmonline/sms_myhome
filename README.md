@@ -1,19 +1,36 @@
 # sms_myhome
-How to use
 
-run at
+##How to use
+
+run as
+
+<code>
 /usr/bin/php archive.php username 'month to move' 'view|exec'
-example
+</code>
+###example
+
+<code>
 /usr/bin/php archive.php chakrit 'last month' 'exec'
-There is move email from /home/chakrit/Maildir/cur/* to /home/chakrit/Maildir/.Year2017.Jan/cur
+</code>
+
+There is move email from /home/chakrit/Maildir/cur/* to /home/chakrit/Maildir/.Year2017.Jan/cur/
+
 
 First you should check with command
+
+<code>
 /usr/bin/php archive.php chakrit '-12 month' 'view'
+</code>
 
 And then execute with command
-/usr/bin/php archive.php chakrit '-12 month' 'exec'
 
-Example command
+<code>
+/usr/bin/php archive.php chakrit '-12 month' 'exec'
+</code>
+
+###Example command
+
+<code>
 /usr/bin/php archive.php chakrit '-12 month' 'view'
 /usr/bin/php archive.php chakrit '-12 month' 'exec'
 /usr/bin/php archive.php chakrit '-11 month' 'view'
@@ -23,9 +40,12 @@ Example command
 ...
 /usr/bin/php archive.php chakrit '-1 month' 'view'
 /usr/bin/php archive.php chakrit '-1 month' 'exec'
+</code>
 
 
 your folder structure should show below
+
+<code>
 +.Year2016
  -.Year2016.Jan
  -.Year2016.Feb
@@ -42,6 +62,6 @@ your folder structure should show below
 +.Year2017
  -.Year2017.Jan
  -.Year2017.Feb
- 
+ </code>
  
  
