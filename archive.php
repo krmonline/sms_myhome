@@ -21,8 +21,13 @@ $daydiff = intval(($now - $lastmonth_timestamp)/86400);
 $daydiff--; // file -mtime +date not include this day
 //echo $daydiff."\n";
 // /home/chakrit/Maildir/.Year2017.Jan
-$fullpath = $path.".Year".$submonth;
+$yearpath = $path.".Year";
+$fullpath = $yearpath.$submonth;
 if(!file_exists($fullpath) && $action == "exec"){
+ if(!file_exists($yearpath)){
+    $result = `$maildirmake $yearpath`;
+    $result = `chown $username $yearpath`;
+  }
  $result = `$maildirmake '$fullpath'`;
  $result = `chown $username $fullpath -R`;
  echo "Make directory '$fullpath' success.\n";
