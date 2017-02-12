@@ -88,4 +88,9 @@ your folder structure should show below
  
  </code>
  
+Last you can create crontab like this
+0 0 1 * * /usr/bin/php /home/chakrit/archive.php chakrit 'last month' exec
+
+For archive every month
+ 
  
